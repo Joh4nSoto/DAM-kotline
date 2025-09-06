@@ -86,11 +86,23 @@ fun main(){
     }
 
     //diga si a, b y c son todos pares
-    fun a_b_c_son_pares(a:Int,b:Int,c:Int){
+    a = 2
+    b = 4
+    var c = 6
+    fun a_b_c_son_pares(a:Int,b:Int,c:Int): Boolean{
         var lista_numeros = mutableListOf(a,b,c)
+        var contador = 0
         for(i in lista_numeros){
-            if(i)
+            if(i%2==0){
+                contador++
+            }
+        }
+        if(contador==3){
+            return true
+        }else{
+            return false
         }
     }
+    println(a_b_c_son_pares(a,b,c))
 
 }
