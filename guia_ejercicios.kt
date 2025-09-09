@@ -29,7 +29,7 @@ fun main(){
     val suma_numeros_pares = numeros_pares.sum()
 
     //Encuentre el primer elemento que sea impar y mayor a 10.
-    val primer_elemento_impar_mayor_a_10 = numeros.find { it%2!=0 || it>10 }
+    val primer_elemento_impar_mayor_a_10 = numeros.find { it%2!=0 && it>10 }
     println(primer_elemento_impar_mayor_a_10)
 
     //ULTIMOS EJERCICIOS
