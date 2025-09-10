@@ -20,4 +20,10 @@ open class CategoriaController() {
             println(categoria.toString())
         }
     }
+
+    open fun obtenerCategoria(id: Int): Categoria? = categorias.find { it.id == id }
+
+    open fun obtenerLista(): MutableList<Categoria>{
+        return categorias
+    }
 }

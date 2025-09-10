@@ -9,7 +9,7 @@ open class LibroController(){
     open fun buscarLibro(isbn: String):Libro? = libros.find { it.isbn == isbn }
 
     open fun listarLibros(){
-        println("Lista de categorias:")
+        println("Lista de los libros:")
         for(libro in libros){
             println(libro.toString())
         }
