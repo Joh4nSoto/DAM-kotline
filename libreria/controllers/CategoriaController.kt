@@ -3,8 +3,9 @@ package libreria.controllers
 import libreria.models.Categoria
 import libreria.models.Libro
 
-open class CategoriaController(var id:Int = 0, var categorias: MutableList<Categoria>) {
-
+open class CategoriaController() {
+    var id:Int = 0
+    var categorias: MutableList<Categoria> = mutableListOf()
     init{
         var categoria_terror = Categoria(id++,"Terror")
         var categoria_comedia = Categoria(id++,"Comedia")

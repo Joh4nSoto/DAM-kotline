@@ -3,8 +3,9 @@ package libreria.controllers
 import libreria.models.Categoria
 import libreria.models.Libro
 
-open class LibroController(var id:Int = 0, var libros: MutableList<Libro>){
-
+open class LibroController(){
+    var id:Int = 0
+    var libros: MutableList<Libro> = mutableListOf()
     open fun buscarLibro(isbn: String):Libro? = libros.find { it.isbn == isbn }
 
     open fun listarLibros(){
