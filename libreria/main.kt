@@ -65,8 +65,23 @@ fun main(){
             var descripcion = readln()
             lc.editarLibro(isbn,titulo,categoria!!,descripcion)
         }else if(opc==4){
-
+            println("ingrese el isbn del libro que desea eliminar")
+            var isbn = readln()
+            var libro_eliminar = lc.buscarLibro(isbn)
+            println("Libro $libro_eliminar encontrado para eliminar")
+            println("Deseas eliminar este libro?")
+            println("1) Si")
+            println("2) No")
+            var opc = opcion()
+            if(opc==1){
+                lc.eliminarLibro(isbn)
+            }else if(opc==2){
+                continue
+            }
+        }else if(opc==5){
+            encendido = false
+        }else{
+            println("Ingresa una opcion valida")
         }
     }
-
 }
