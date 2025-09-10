@@ -52,6 +52,7 @@ fun main(){
             var descripcion = readln()
             lc.agregarLibro(titulo,categoria!!,descripcion)
         }else if(opc==3){
+            lc.listarLibros()
             println("ingrese el isbn del libro que desea editar")
             var isbn = readln()
             var libro_editar = lc.buscarLibro(isbn)
@@ -65,6 +66,7 @@ fun main(){
             var descripcion = readln()
             lc.editarLibro(isbn,titulo,categoria!!,descripcion)
         }else if(opc==4){
+            lc.listarLibros()
             println("ingrese el isbn del libro que desea eliminar")
             var isbn = readln()
             var libro_eliminar = lc.buscarLibro(isbn)

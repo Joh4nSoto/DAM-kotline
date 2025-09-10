@@ -17,6 +17,7 @@ open class LibroController(){
 
     open fun listarLibrosPorCategoria(categoria: Categoria){
         var librosPorCategoria = libros.filter { it.categoria==categoria }
+        println("Lista de los libros de categoria ${categoria.categoria}")
         if (librosPorCategoria != null){
             for (libro in librosPorCategoria){
                 println(libro.toString())
